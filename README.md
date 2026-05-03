@@ -44,7 +44,7 @@ Prerequisites
 Clone the repository:
 
 ``` bash
-git clone [https://github.com/ivanruizdev/LIMS-Bridge.git](https://github.com/ivanruizdev/lims-report-sender.git)
+git clone https://github.com/ivanruizdev/lims-report-sender.git
 cd lims-report-sender
 ```
 
