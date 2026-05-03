@@ -44,8 +44,8 @@ Prerequisites
 Clone the repository:
 
 ``` bash
-git clone [https://github.com/ivanruizdev/LIMS-Bridge.git](https://github.com/ivanruizdev/LIMS-Bridge.git)
-cd LIMS-Bridge
+git clone [https://github.com/ivanruizdev/LIMS-Bridge.git](https://github.com/ivanruizdev/lims-report-sender.git)
+cd lims-report-sender
 ```
 
 Configure Environment Variables:
@@ -100,4 +100,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 Contributions are welcome! Please feel free to submit a Pull Request or open an issue for suggestions and bug reports.
 
-Developed with ❤️ for the clinical laboratory community.
+Developed with ❤️ for the clinical laboratory community by [Ivan Ruiz](https://ivanruiz.dev).
