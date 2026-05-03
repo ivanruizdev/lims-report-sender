@@ -1,0 +1,53 @@
+# ==========================================
+# 1. Credenciales y Seguridad (¡CRÍTICO!)
+# ==========================================
+.env
+*.pem
+*.key
+
+# ==========================================
+# 2. Datos Sensibles y Temporales Clínicos
+# ==========================================
+# Ignoramos la carpeta temporal para que NINGÚN PDF
+# de pacientes se suba a GitHub por accidente.
+tmp/
+tmp/pdfs/*
+
+# Ignoramos la base de datos local SQLite del gestor de colas
+*.sqlite3
+*.db
+local_queue.db
+
+# ==========================================
+# 3. Caché y Archivos de Python
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Entornos virtuales (por si llegas a crear uno local fuera de Docker)
+venv/
+.venv/
+env/
+
+# ==========================================
+# 4. Documentación Escolar y Personal
+# ==========================================
+# Ignoramos tu carpeta personalDocs para mantener el 
+# repositorio limpio y enfocado 100% en el código fuente.
+personalDocs/
+*.docx
+*.pdf
+*.txt
+*.dbml
+personalDocs/diagrams/*
+personalDocs/diagrams/generated/*
+personalDocs/*.*
+
+# ========================================
+# Miscelaneos
+# =======================================
+proyect_structure.txt
+
