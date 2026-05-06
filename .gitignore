@@ -40,7 +40,6 @@ env/
 personalDocs/
 *.docx
 *.pdf
-*.txt
 *.dbml
 personalDocs/diagrams/*
 personalDocs/diagrams/generated/*
