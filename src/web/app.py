@@ -25,18 +25,29 @@ app.add_middleware(
 # ==========================================
 bot_state = {
     "running": False,
-    "enviadosHoy": 47
+    "enviadosHoy": 142 # Número más realista para una demo
 }
 
 queue_data = [
     { "id": "99801", "paciente": "Roberto Sánchez", "status": "pending", "time": "14:10 PM", "channels": ["whatsapp"] },
-    { "id": "99802", "paciente": "Lucía Méndez", "status": "pending", "time": "14:15 PM", "channels": ["telegram"] }
+    { "id": "99802", "paciente": "Lucía Méndez", "status": "pending", "time": "14:15 PM", "channels": ["telegram"] },
+    { "id": "99803", "paciente": "Marcos Ruiz", "status": "pending", "time": "14:20 PM", "channels": ["whatsapp", "telegram"] },
+    { "id": "99804", "paciente": "Elena Torres", "status": "pending", "time": "14:22 PM", "channels": ["whatsapp"] },
+    { "id": "99805", "paciente": "Javier Solís", "status": "pending", "time": "14:25 PM", "channels": ["telegram"] },
+    { "id": "99806", "paciente": "Sofía Lara", "status": "pending", "time": "14:30 PM", "channels": ["whatsapp"] },
+    { "id": "99807", "paciente": "Ricardo Alva", "status": "pending", "time": "14:35 PM", "channels": ["telegram"] },
+    { "id": "99808", "paciente": "Patricia Luna", "status": "pending", "time": "14:40 PM", "channels": ["whatsapp", "telegram"] },
+    { "id": "99809", "paciente": "Andrés Castro", "status": "pending", "time": "14:45 PM", "channels": ["whatsapp"] },
+    { "id": "99810", "paciente": "Beatriz Peña", "status": "pending", "time": "14:50 PM", "channels": ["whatsapp"] },
 ]
 
 history_data = [
-    { "id": "99799", "paciente": "Fernando Gómez", "status": "success", "time": "13:50 PM", "channels": ["whatsapp"] }
+    { "id": "99799", "paciente": "Fernando Gómez", "status": "success", "time": "13:50 PM", "channels": ["whatsapp"] },
+    { "id": "99798", "paciente": "Ana Beltrán", "status": "success", "time": "13:45 PM", "channels": ["telegram"] },
+    { "id": "99797", "paciente": "Carlos Slim", "status": "success", "time": "13:30 PM", "channels": ["whatsapp"] },
+    { "id": "99796", "paciente": "Diana Prince", "status": "success", "time": "13:15 PM", "channels": ["whatsapp", "telegram"] },
+    { "id": "99795", "paciente": "Erik Magnus", "status": "success", "time": "13:00 PM", "channels": ["telegram"] },
 ]
-
 # ==========================================
 # Rutas de la API (Endpoints)
 # ==========================================
