@@ -13,7 +13,7 @@ const stats = reactive({ enviadosHoy: 0, pendientes: 0 });
 const fetchData = async () => {
   try {
     // 1. Traer estado general
-    const resStatus = await fetch('http://localhost:8000/api/status');
+    const resStatus = await fetch('/api/status');
     const dataStatus = await resStatus.json();
     botRunning.value = dataStatus.botRunning;
     apiStatus.telegram = dataStatus.apiStatus.telegram;
@@ -22,11 +22,11 @@ const fetchData = async () => {
     stats.pendientes = dataStatus.stats.pendientes;
 
     // 2. Traer la cola de envío
-    const resQueue = await fetch('http://localhost:8000/api/queue');
+    const resQueue = await fetch('/api/queue');
     queue.value = await resQueue.json();
 
     // 3. Traer el historial
-    const resHistory = await fetch('http://localhost:8000/api/history');
+    const resHistory = await fetch('/api/history');
     historyList.value = await resHistory.json();
     
   } catch (error) {
@@ -40,7 +40,7 @@ const fetchData = async () => {
 const cancelJob = async (id) => {
   console.log(`Petición para cancelar envío ID: ${id}`);
   try {
-    await fetch(`http://localhost:8000/api/queue/${id}`, {
+    await fetch(`/api/queue/${id}`, {
       method: 'DELETE'
     });
     // Actualización local inmediata para UX rápida (el pollInterval lo confirmará en breve)
@@ -54,7 +54,7 @@ const cancelJob = async (id) => {
 const toggleBot = async () => {
   console.log("Petición para cambiar estado del motor");
   try {
-    const response = await fetch('http://localhost:8000/api/bot/toggle', {
+    const response = await fetch('/api/bot/toggle', {
       method: 'POST'
     });
     const data = await response.json();
