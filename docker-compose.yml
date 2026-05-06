@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  lims-bridge:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: lims-bridge-app
+    restart: unless-stopped
+    ports:
+      # Mapeamos el puerto 80 del servidor host al 8000 del contenedor
+      - "80:8000"
+    volumes:
+      # Montar la carpeta local de PDFs para que el Watchdog la monitoree
+      - ./tmp/pdfs:/app/tmp/pdfs
+      # (Opcional) Montar la BD local de SQLite para persistencia entre reinicios
+      - ./data:/app/data
+    env_file:
+      - .env
+    environment:
+      # Asegurarnos de que FastAPI sepa dónde buscar los estáticos
+      - ENVIRONMENT=production
