@@ -79,11 +79,6 @@ def delete_queue_item(item_id: str):
     queue_data = [item for item in queue_data if item["id"] != item_id]
     return {"message": "Eliminado correctamente", "pendientes": len(queue_data)}
 
-# Ruta de prueba simple
-@app.get("/")
-def read_root():
-    return {"mensaje": "LIMS-Report-Sender API está funcionando correctamente"}
-
 static_path = os.path.join(os.path.dirname(__file__), "static")
 if os.path.isdir(static_path):
     app.mount("/assets", StaticFiles(directory=os.path.join(static_path, "assets")), name="assets")
