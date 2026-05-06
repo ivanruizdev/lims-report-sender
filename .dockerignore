@@ -1,0 +1,14 @@
+
+venv/
+pycache/
+.pytest_cache/
+
+dashboard/node_modules/
+dashboard/dist/
+
+.env
+.git/
+.gitignore
+
+tmp/
+data/
